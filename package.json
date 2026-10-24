@@ -1,0 +1,11 @@
+{
+  "name": "meridian-email-news",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vercel dev"
+  },
+  "dependencies": {
+    "nodemailer": "^7.0.13"
+  }
+}

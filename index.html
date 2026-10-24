@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#f6f4ef" />
+  <title>Meridian Daily News</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .brief-wrap{max-width:1080px;margin:0 auto;padding:60px 32px 88px}
+    .brief-intro{max-width:720px;margin-bottom:48px}
+    .eyebrow{color:var(--accent);font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;margin-bottom:16px}
+    .brief-intro h1{font-family:'Fraunces',serif;font-size:clamp(38px,6vw,68px);line-height:1.04;font-weight:600;letter-spacing:-.03em;margin-bottom:18px}
+    .brief-intro p{font-size:17px;line-height:1.75;color:var(--ink-soft);max-width:650px}
+    .schedule-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+    .schedule-card{border:1px solid var(--line);background:var(--surface);border-radius:var(--radius);padding:26px;box-shadow:var(--shadow)}
+    .schedule-card h2{font-family:'Fraunces',serif;font-size:25px;margin-bottom:8px}
+    .schedule-card .time{color:var(--accent);font-weight:700;font-size:14px;letter-spacing:.04em;margin-bottom:15px}
+    .schedule-card p{color:var(--ink-soft);font-size:14px;line-height:1.7}
+    .brief-note{margin-top:28px;border-left:3px solid var(--accent);padding:6px 0 6px 16px;color:var(--muted);font-size:13px;line-height:1.7}
+    @media(max-width:680px){.brief-wrap{padding:42px 20px 64px}.schedule-grid{grid-template-columns:1fr}.schedule-card{padding:22px}.bar{padding:16px 20px}.date{font-size:10px;letter-spacing:.08em}.brand{font-size:22px}}
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="bar">
+      <div class="date">Daily email editions</div>
+      <a href="/" class="brand">MERIDIAN</a>
+      <div class="actions"><span class="muted">Lagos time</span></div>
+    </div>
+  </header>
+  <main class="brief-wrap">
+    <section class="brief-intro">
+      <div class="eyebrow">A personal newsroom, delivered</div>
+      <h1>The stories that matter, straight to your inbox.</h1>
+      <p>Meridian now curates news from its configured providers into separate email editions. Each reader gets a brief shaped around their interests, with direct links to the original reporting.</p>
+    </section>
+    <section class="schedule-grid" aria-label="Email schedules">
+      <article class="schedule-card">
+        <h2>Morning editions</h2>
+        <div class="time">Every day · 8:00 AM WAT</div>
+        <p><strong>Emmanuel:</strong> finance and markets, with a dedicated CPI, NFP and FOMC watch.</p>
+        <p><strong>Wisdom:</strong> a professional brief on Nigerian and African business, entrepreneurship, leadership, technology, education, engineering and policy, plus a separate opportunities section.</p>
+        <p><strong>Joshua:</strong> a friendly, finance-led brief with business and technology stories and a separate opportunities section.</p>
+      </article>
+      <article class="schedule-card">
+        <h2>Zainab’s edition</h2>
+        <div class="time">Every day · 7:00 PM WAT</div>
+        <p>A more carefully curated finance edition, focused on the day’s most useful developments and what to watch next.</p>
+      </article>
+    </section>
+    <p class="brief-note">The email sender uses the existing SMTP account configured for the service. News provider keys and SMTP credentials stay on the server and are never exposed in this page.</p>
+  </main>
+  <footer class="site-footer">
+    <div>© <span id="year"></span> Meridian Daily News</div>
+    <div class="muted">Curated daily · Africa/Lagos</div>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
